@@ -49,23 +49,24 @@ def output2(box):
     elif box.get()=='Текстура': return 'texture'
     elif box.get()=='Включения': return 'additions'
     elif box.get()=='Грансостав': return 'ups'
-    else: return'Неверное значение'
+    else: return None
 
 
-
+#второй комбобокс с уникальными значениями.
 box2=ttk.Combobox(master=wind, values=list(output1(box)))
 box2.pack()
 box.bind('<<ComboboxSelected>>', lambda event: box2.config(values=list(output1(box))))
 
 #получения ID для уникальных значений признака.
 
-keys={output2(box), 'id'}
 
 def val(name):
    return name.get()
 
+#вывод результата.
 finalres=ttk.Label(master=wind, text='Выберите значения на анализ:')
 finalres.pack()
+#Обновление текста результата с фильтром.
 box2.bind('<<ComboboxSelected>>', lambda event: finalres.config(text=(( set(v['id'] for v in [d for d in [{k:v for k, v in i.items() if k in {output2(box), 'id'}} for i in soildata] if d[output2(box)] in {val(box2)}]) ))))
     
 wind.mainloop()
