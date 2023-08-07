@@ -33,5 +33,11 @@
 "texture": "blank",
 "additions": "blank",
 "particle_size": "blank"}
-
+,
+{"id": "6",
+"color": "Brown",
+"secondary_color": "blank",
+"texture": "blank",
+"additions": "blank",
+"particle_size": "blank"}
 ]
