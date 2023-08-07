@@ -61,16 +61,12 @@ box.bind('<<ComboboxSelected>>', lambda event: box2.config(values=list(output1(b
 
 keys={output2(box), 'id'}
 
-keyvalues={box2.get}
-
-intermediate = [{k:v for k, v in i.items() if k in keys} for i in soildata]
-
-finalvalues=[d for d in intermediate if d[output2(box)] in keyvalues]
-uuid = ( set(v['id'] for v in finalvalues) )
+def val(name):
+   return name.get()
 
 finalres=ttk.Label(master=wind, text='Выберите значения на анализ:')
 finalres.pack()
-box2.bind('<<ComboboxSelected>>', lambda event: finalres.config(text=uuid))
+box2.bind('<<ComboboxSelected>>', lambda event: finalres.config(text=(( set(v['id'] for v in [d for d in [{k:v for k, v in i.items() if k in {output2(box), 'id'}} for i in soildata] if d[output2(box)] in {val(box2)}]) ))))
     
 wind.mainloop()
 
