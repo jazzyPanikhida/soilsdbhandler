@@ -14,7 +14,7 @@ with open('soildb.json') as soildb:
 uid = ( set(idu['id'] for idu in soildata) )
 ucolor = ( set(ucol['color'] for ucol in soildata) )
 seccol = ( set(usec['secondary_color'] for usec in soildata) )
-utexture = ( set(utex['texture'] for utex in soildata) )
+ustructure = ( set(utex['structure'] for utex in soildata) )
 uadd = ( set(addit['additions'] for addit in soildata) )
 ups = ( set(partsize['particle_size'] for partsize in soildata) )
 
@@ -26,7 +26,7 @@ label = ttk.Label(master=wind, text='Сортировка по уникальн�
 label.pack()
 
 #комбобокс.
-choices=('id', "Цвет", "Вторичный Цвет", "Текстура", "Включения", "Грансостав")
+choices=('id', "Цвет", "Вторичный Цвет", "Структура", "Включения", "Грансостав")
 choice=tk.StringVar(value=choices[0])
 box=ttk.Combobox(wind, textvariable=choice)
 box['values']=choices
@@ -37,7 +37,7 @@ def output1(box):
     if box.get()=="id": return uid
     elif box.get()=="Цвет": return ucolor
     elif box.get()=='Вторичный Цвет': return seccol
-    elif box.get()=='Текстура': return utexture
+    elif box.get()=='Структура': return ustructure
     elif box.get()=='Включения': return uadd
     elif box.get()=='Грансостав': return ups
     else: return'Неверное значение'
@@ -46,9 +46,9 @@ def output2(box):
     if box.get()=="id": return 'id'
     elif box.get()=="Цвет": return 'color'
     elif box.get()=='Вторичный Цвет': return 'secondary_color'
-    elif box.get()=='Текстура': return 'texture'
+    elif box.get()=='Структура': return 'structure'
     elif box.get()=='Включения': return 'additions'
-    elif box.get()=='Грансостав': return 'ups'
+    elif box.get()=='Грансостав': return 'particle_size'
     else: return None
 
 
