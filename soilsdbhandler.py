@@ -21,7 +21,7 @@ ups = ( set(partsize['particle_size'] for partsize in soildata) )
 #окно+хэдер.
 wind = tk.Tk()
 wind.title('Сортировщик Почвенных Данных')
-wind.geometry('800x300')
+wind.geometry('2200x900')
 label = ttk.Label(master=wind, text='Сортировка по уникальным значениям признаков:', font='Calibri 24')
 label.pack()
 
