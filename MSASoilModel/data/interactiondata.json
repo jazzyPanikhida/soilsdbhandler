@@ -1,0 +1,16 @@
+[
+{
+    "faclist":[
+        "fac1"
+    ]
+,
+    "emodval": {
+        "fac1": "eval1/eval2-eval3"
+    }
+,
+    "fmodval": {
+        "fac1": "fval1/fval2-fval3"
+    }
+}
+
+]

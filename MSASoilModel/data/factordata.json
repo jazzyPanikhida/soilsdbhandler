@@ -1,0 +1,63 @@
+[
+{
+    "factorname":"hum",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"biomass",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"humidity",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"temp",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"humidityamp",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"tempamp",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"pH",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"SAC",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"partsize",
+    "facvalue":0.5,
+    "expvalue":0.3
+}
+,
+{
+    "factorname":"oxygen",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"R2O3",
+    "facvalue":0.5,
+    "expvalue":0.3
+},
+{
+    "factorname":"SiO2",
+    "facvalue":0.5,
+    "expvalue":0.3
+}
+]
